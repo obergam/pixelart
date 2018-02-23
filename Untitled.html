@@ -1,0 +1,40 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pixel Art Maker!</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Rammetto+One" rel="stylesheet">
+</head>
+<body>
+    <h1 class="outlined-font">Lab: Pixel Art Maker</h1>
+
+    <h2 class="outlined-font">Choose Canvas Size</h2>
+
+    <img src="https://image.ibb.co/gvMKLn/cloud.png" alt="Happy cloud"               class="floating-cloud">
+
+    <form id="size-picker" class="normal-font">
+        Grid Height:
+        <input type="number" id="input-height" name="height" min="1" value="1"           class="normal-font">
+        Grid Width:
+        <input type="number" id="input-width" name="width" min="1" value="1"             class="normal-font">
+        <input type="submit" id="submit" class="normal-font">
+        <input type="button" id="clear" value="Clear" class="normal-font">
+    </form>
+
+    <h2 class="outlined-font">Pick A Color</h2>
+    <input type="color" id="color-picker">
+
+    <h2 class="outlined-font">Quick Fill Canvas</h2>
+    <input type="button" id="quick-fill" value="Fill" class="normal-font">
+
+    <h2 class="outlined-font">Design Canvas</h2>
+
+    <h3 class="outlined-font">Click & Drag To Paint / Right Click To Erase</h3>
+
+    <img src="https://image.ibb.co/h4LDfn/cloud_mini.png" alt="Mini cloud"           class="floating-mini-cloud">
+
+    <table id="pixel-canvas"></table>
+
+    <script src="js/designs.js"></script>
+</body>
+</html>
