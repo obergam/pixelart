@@ -1,52 +1,45 @@
-// Create variables
+$(document).ready(function() {
 
-$(function(){
-  // cache the jQuery colorPicker obj
-  const $colorPicker = $('#colorPicker');
+// Select color input
+const color = $("#colorPicker");
 
-  // initialize default color
-  let color = $colorPicker.val();
-
-  // listen to change events on colorPicker and update color
-  $colorPicker.change(function() {
-    color = $colorPicker.val();
-  });
-
-  // declare rows and cols
-  let rows, cols;
-
-  // cache jQuery input objects for rows, cols, and sizePicker form
-  const rowInput = $('#inputHeight');
-  const colsInput = $('#inputWidth');
-  const sizePicker = $('#sizePicker');
-
-  // listen for submit event update rows and cols then call makeGrid()
-  sizePicker.submit(function(evt){
-    evt.preventDefault();
-    rows = rowInput.val();
-    cols = colsInput.val();
-    makeGrid();
-  });
-
-  // cache the jQuery table obj
-  const table = $('#pixelCanvas');
-  function makeGrid() {
-    table.empty();
-    let tableHTML = '';
-    for (let r = 0; r < rows; r++) {
-      tableHTML += '<tr>';
-      for (let c = 0; c < cols; c++) {
-        tableHTML += '<td></td>';
-      }
-      tableHTML += '</tr>';
+// Select size input
+const height = $("#inputHeight");
+const width = $("#inputWidth");
+const theGrid = $("#pixelCanvas");
+// function to create Grid
+function makeGrid() {
+  for (r = 0; r < height.val(); r++) {
+    theGrid.append("<tr></tr>");
+    for (c = 0; c < width.val(); c++) {
+      theGrid
+        .children()
+        .last()
+        .append("<td></td>");
     }
-    table.append(tableHTML);
   }
+}
 
-  // use event delegation to listen to clicks on cells
-  table.on('click', 'td', function(evt) {
-    $(evt.target).css('background-color', color);
-  });
+// When size is submitted it calls makeGrid()
+
+$("#sizePicker").submit(function(event) {
+  theGrid.empty();
+  event.preventDefault();
+  makeGrid();
 });
 
-function clearCanvas
+//delete what you did
+// $("#clearCanvas").on("click", "td", function() {
+//   theGrid.css("background-color", "white");
+// });
+
+// event listener and background color change
+theGrid.on("click", "td", function() {
+  $(this).css("background-color", color.val());
+});
+
+// event listener for clearing cell with double click
+theGrid.on("dblclick", "td", function() {
+  $(this).css("background-color", "transparent");
+});
+    });
