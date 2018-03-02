@@ -28,10 +28,12 @@ $("#sizePicker").submit(function(event) {
   makeGrid();
 });
 
-//delete what you did
-// $("#clearCanvas").on("click", "td", function() {
-//   theGrid.css("background-color", "white");
-// });
+//Clear the Canvas
+const clearC = $("#clearCanvas")
+
+clearC.on("click", "td", function() {
+  theGrid.css("background-color", "white");
+});
 
 // event listener and background color change
 theGrid.on("click", "td", function() {
