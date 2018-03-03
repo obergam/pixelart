@@ -20,7 +20,7 @@ function makeGrid() {
   }
 }
 
-// When size is submitted it calls makeGrid()
+// When user click submit make the Canvas
 
 $("#sizePicker").submit(function(event) {
   theGrid.empty();
@@ -29,11 +29,9 @@ $("#sizePicker").submit(function(event) {
 });
 
 //Clear the Canvas
-const clearC = $("#clearCanvas")
-
-clearC.on("click", "td", function() {
-  theGrid.css("background-color", "white");
-});
+$("#clearBtn").click(function(){
+        $("td").css('background-color', 'white');
+    });
 
 // event listener and background color change
 theGrid.on("click", "td", function() {

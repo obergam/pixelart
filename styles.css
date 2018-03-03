@@ -31,12 +31,12 @@ td {
 }
 
 #pixelCanvas {
-
-
+    /* margin: 40px;
+    align-items: center; */
 }
 
 #clearCanvas {
-    margin: 20px;
+    margin: 40px;
 }
 
 table {
