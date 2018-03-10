@@ -38,8 +38,22 @@ theGrid.on("click", "td", function() {
   $(this).css("background-color", color.val());
 });
 
+//event listener for drag and color
+
+
 // event listener for clearing cell with double click
 theGrid.on("dblclick", "td", function() {
   $(this).css("background-color", "transparent");
 });
     });
+
+$(function(){
+  	$('.repeat').click(function(){
+      	var classes =  $(this).parent().attr('class');
+          $(this).parent().attr('class', 'animate');
+          var indicator = $(this);
+          setTimeout(function(){
+          	$(indicator).parent().addClass(classes);
+          }, 20);
+      });
+  });
