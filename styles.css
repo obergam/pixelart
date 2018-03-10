@@ -13,7 +13,7 @@ h1 {
     margin: 0.2em;
 }
 td:hover {
-  background-color: purple;
+  background-color: #ccf2ff;
 }
 h2 {
     margin: 1em 0 0.25em;
@@ -38,18 +38,17 @@ button {
     transition-duration: 1s;
     text-decoration: none;
     overflow: hidden;
-    border-radius: 25%;
+    margin-top: 15px;
+    font-family: inherit;
 }
 
 button:hover{
    background:#fff;
    box-shadow:0px 2px 10px 5px #4e6d7e;
    color:#000;
-   border-radius: 35%;
 }
 
 button:after {
-    content: "";
     background: #44606f;
     display: block;
     position: absolute;
@@ -68,17 +67,17 @@ button:active:after {
     transition: 0s
 }
 
-/* #clearCanvas {
-    margin: 40px;
-} */
+#submitButton {
+    margin-left: 15px;
+}
 
 #inputHeight {
-  background-color: #33ccff;
+  background-color: #ccf2ff;
   font-family: cursive;
   text-align: center;
 }
 #inputWidth {
-  background-color: #33ccff;
+  background-color: #ccf2ff;
     font-family: cursive;
     text-align: center;
 }
@@ -100,13 +99,6 @@ td {
 
 input[type=number] {
     width: 5em;
-}
-#green{
-    color: "color"
-}
-
-#green:hover{
-    color: "green"
 }
 
 p

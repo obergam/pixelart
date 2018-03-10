@@ -1,8 +1,6 @@
 $(document).ready(function() {
-
 // Select color input
 const color = $("#colorPicker");
-
 // Select size input
 const height = $("#inputHeight");
 const width = $("#inputWidth");
@@ -19,7 +17,6 @@ function makeGrid() {
     }
   }
 }
-
 // When user click submit make the Canvas
 
 $("#sizePicker").submit(function(event) {
@@ -38,8 +35,30 @@ theGrid.on("click", "td", function() {
   $(this).css("background-color", color.val());
 });
 
-//event listener for drag and color
+let isDown = false;
+//Drag and color multiple cells
+$(document).mousedown(function() {
+  // when mouse is down, isDown is true
+  isDown = true;
+});
 
+$(document).mouseup(function() {
+  // when mouse is up, isDown is false
+  isDown = false;
+});
+
+// event is added to table not cells
+theGrid.on("mousedown mousemove", function(event) {
+  // event.target is the clicked element
+  // if event.target is a td, change color to input color
+  if (event.target === "td") {
+    //when mouse is down
+    if (isDown) {
+      event.target.css("background-color", color.val());
+    }
+  }
+  event.preventDefault();
+});
 
 // event listener for clearing cell with double click
 theGrid.on("dblclick", "td", function() {
