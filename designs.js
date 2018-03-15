@@ -31,11 +31,14 @@ $("#clearBtn").click(function(){
     });
 
 // event listener and background color change
-theGrid.on("click", "td", function() {
-  $(this).css("background-color", color.val());
+function colorTd (el) {
+  let element = $(el.target);
+  element.css('background-color', color.val());
+}
+
+theGrid.on("click", "td", function(event) {
+  colorTd(event);
 });
-
-
 
 // event is added to table not cells
 let isDown = false;
@@ -57,12 +60,15 @@ $('#pixelCanvas').on("mousedown mousemove", function(event) {
   if (event.target && event.target.nodeName == "TD") {
     //when mouse is down
     if (isDown) {
-      event.target.css("background-color", color.val());
+      colorTd(event);
     }
   }
   event.preventDefault();
 });
-
+// presets 10*10, 15*15, 20*20
+$('#ten').on("click", function(event) {
+  makeGrid(10, 10 , event)
+  });
 
 // event listener for clearing cell with double click
 theGrid.on("dblclick", "td", function() {
