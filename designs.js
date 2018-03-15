@@ -55,7 +55,6 @@ $(document).mouseup(function() {
 
 // event is added to table not cells
 $('#pixelCanvas').on("mousedown mousemove", function(event) {
-  // event.target is the clicked element
   // if event.target is a td, change color to input color
   if (event.target && event.target.nodeName == "TD") {
     //when mouse is down
