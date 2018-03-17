@@ -27,7 +27,7 @@ $("#sizePicker").submit(function(event) {
 
 //Clear the Canvas
 $("#clearBtn").click(function(){
-        $("td").css('background-color', 'white');
+        $("td").css('background-color', '');
     });
 
 // event listener and background color change

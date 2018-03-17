@@ -13,7 +13,7 @@ h1 {
     margin: 0.2em;
 }
 td:hover {
-  background-color: #ccf2ff;
+  background-color: #336699;
 }
 h2 {
     margin: 1em 0 0.25em;
@@ -96,6 +96,10 @@ table {
     background-color: white;
     margin-left: auto;
     margin-right: auto
+}
+
+.container {
+  grid-template-columns: 30% auto;
 }
 
 tr {
