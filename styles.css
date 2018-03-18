@@ -22,7 +22,34 @@ h2 {
 h2:first-of-type {
     margin-top: 0.5em;
 }
+/* CSS Grids */
 
+#content{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+}
+#content > *{
+  padding: 10px;
+}
+header{
+  grid-column: span 2;
+}
+main{
+  grid-column: 2 / 2;
+  grid-row: 2 / 2;
+}
+aside{
+  grid-column: 1 / 2;
+}
+nav{
+  grid-column: 1 / 2;
+}
+footer{
+  grid-column: span 2;
+}
+
+/* Borders */
 table,
 tr,
 td {
@@ -53,7 +80,7 @@ button:hover{
 #submitButton {
     margin-left: 15px;
 }
-
+/* Input fields  */
 .field {
     font-size: 15px;
     transition-duration: 1s;
@@ -89,17 +116,13 @@ button:hover{
     opacity: 0;
     transition: all 0.8s
 }
-
+/* Canvas */
 table {
     border-collapse: collapse;
     margin: 2 auto;
     background-color: white;
     margin-left: auto;
     margin-right: auto
-}
-
-.container {
-  grid-template-columns: 30% auto;
 }
 
 tr {

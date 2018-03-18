@@ -4,38 +4,39 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
     <link rel="stylesheet" href="styles.css">
-    <div class="container" id="title">
-      <div class="animate one">
-        <span>L</span><span>A</span><span>B</span>
-  			<span>P</span><span>I</span><span>X</span><span>3</span><span>L</span> &nbsp;
-  			<span>A</span><span>R</span><span>T</span>
-        <span>M</span><span>A</span><span>K</span><span>E</span><span>R</span>
-  		</div>
-    </div>
+    <script src="designs.js"></script>
 </head>
 <body>
-     <script src="designs.js"></script>
-     <div class="container" class="settings"
-      <h2>Choose Grid Size</h2>
-      <form id="sizePicker">
-          Grid Height:
-          <input type="number" class="field" id="inputHeight" name="height" min="1" value="10">
-          Grid Width:
-          <input type="number" class="field" id="inputWidth" name="width" min="1" value="10">
-          <!-- choose cell size put a minimum of 20
-          <input type="number" id="cellCize" min="1" value="20"> -->
-          <button id="submitButton" name="submit" value="Make a Grid">Make Grid</button>
-          <button id="ten" value="preset1">10 x 10</button>
-          <button id="fifteen" value="preset2">15 x 15</button>
-          <button id="twenty" value="preset3">20 x 20</button>
-      </form>
-      <h2>Pick A Color</h2>
-      <input type="color" id="colorPicker">
-    </div>
-    <div class="container" class="canvas">
-      <h2>Design Canvas</h2>
-      <table id="pixelCanvas"></table>
-      <button id="clearBtn" name="clear" value="Clear">Clear</button>
-    </div>
+  <div id="content">
+      <header>
+        <div class="animate one">
+          <span>L</span><span>A</span><span>B</span>
+    			<span>P</span><span>I</span><span>X</span><span>3</span><span>L</span> &nbsp;
+    			<span>A</span><span>R</span><span>T</span>
+          <span>M</span><span>A</span><span>K</span><span>E</span><span>R</span>
+    		</div>
+      </header>
+       <aside>
+         <h2>Choose Grid Size</h2>
+         <form id="sizePicker">
+            Grid Height:
+            <input type="number" class="field" id="inputHeight" name="height" min="1" value="10">
+            Grid Width:
+            <input type="number" class="field" id="inputWidth" name="width" min="1" value="10">
+            <button id="submitButton" name="submit" value="Make a Grid">Make Grid</button>
+            <h2>Pick A Color</h2>
+            <input type="color" id="colorPicker">
+        </aside>
+        <main>
+              <h2>Design Canvas</h2>
+              <button id="ten" value="preset1">10 x 10</button>
+              <button id="fifteen" value="preset2">15 x 15</button>
+              <button id="twenty" value="preset3">20 x 20</button>
+              <table id="pixelCanvas"></table>
+          <button id="clearBtn" name="clear" value="Clear">Clear</button>
+        </main>
+        <footer>
+        </footer>
+  </div>
 </body>
 </html>
