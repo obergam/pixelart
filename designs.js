@@ -18,7 +18,7 @@ function makeGrid() {
   }
 }
 // default grid size
-$(document).ready( makeGrid(10, 10));
+
 
 // When user click submit make the Canvas
 
@@ -70,6 +70,18 @@ $('#pixelCanvas').on("mousedown mousemove", function(event) {
 
 
 // presets 10*10, 15*15, 20*20
+const preset1 = $('fifteen');
+const preset2 = $('twentyFive');
+const preset3 = $('thirtyFive');
+
+preset1.on("click", function () {
+  for (a = 0; a < 15; a++) {
+    theGrid.append("<tr></tr>");
+      for (b = 0; b < 15; b++) {
+        theGrid.children().last().append("<td></td>");
+      }
+    }
+  });
 
 // event listener for clearing cell with double click
 theGrid.on("dblclick", "td", function() {
