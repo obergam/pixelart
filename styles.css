@@ -28,20 +28,33 @@ h2:first-of-type {
   display: grid;
   grid-template-columns: 30% 70%;
   margin: 0 auto;
+  padding: auto;
 }
 #content > *{
   padding: 10px;
 }
 header{
-  grid-column: span 2;
+  grid-column: span 3;
+  text-align: center;
 }
 main{
   grid-column: 2 / 2;
   grid-row: 2 / 2;
+  border-radius: 5px;
+  background:#fff;
+  box-shadow:0px 2px 10px 5px #4e6d7e;
+  color:#000;
+  margin: 10px;
 }
 aside{
   grid-column: 1 / 2;
+  border-radius: 5px;
+  background:#fff;
+  box-shadow:0px 2px 10px 5px #4e6d7e;
+  color:#000;
+  margin: 10px;
 }
+
 nav{
   grid-column: 1 / 2;
 }
@@ -137,6 +150,10 @@ input[type=number] {
     width: 5em;
 }
 
+colorPicker {
+  float: inherit;
+}
+
 p
 {
 	margin: 0 0 10px;
@@ -144,7 +161,7 @@ p
 
 .animate {
 	font-size: 80px;
-	margin: 100px 0 0;
+	margin: 10px 0 0;
 }
 
 .animate span {
